@@ -1,0 +1,23 @@
+<script>
+var guess;
+var answer;
+var message;
+var possibleWeather = ["rainy","sunny","snow","hail","cloudy","foggy"];
+
+var weatherIndex = Math.floor(Math.random() * possibleWeather.length);
+answer = possibleWeather[weatherIndex];
+console.log("answer: " + answer);
+
+guess = prompt("What is the weather going to be like tomorrow?");
+console.log("user guess: " + guess);
+
+
+if(guess === answer) {
+  message = "I agree! The weather will be " + guess + " tomorrow.";
+} else {
+  message = "I disagree. I think the weather will be " + answer + " tomorrow.";
+}
+
+alert(message);
+
+</script>
