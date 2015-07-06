@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weather Guessing Game</title>
+</head>
+
+<body>
+<p id="user_guess">
+  You guessed:
+</p>
+
+<p id="answer">
+  I think the weather will be:
+</p>
+
 <script>
 var guess;
 var answer;
@@ -8,7 +24,7 @@ var weatherIndex = Math.floor(Math.random() * possibleWeather.length);
 answer = possibleWeather[weatherIndex];
 console.log("answer: " + answer);
 
-guess = prompt("What is the weather going to be like tomorrow?");
+guess = prompt("What is the weather going to be like tomorrow?").toLowerCase();
 console.log("user guess: " + guess);
 
 
@@ -20,4 +36,18 @@ if(guess === answer) {
 
 alert(message);
 
+var image = document.createElement("IMG");
+image.setAttribute("src","http://images.clipartpanda.com/rain-clipart-RcGyE4Epi.png");
+document.getElementById("user_guess").appendChild(image);
+
 </script>
+
+
+
+<p id="answer">
+</p>
+
+
+</body>
+
+</html>
